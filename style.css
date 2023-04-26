@@ -45,6 +45,32 @@ body {
     
 }
 
+.typing-text p span.incorrect{
+    color:red;
+    background-color: rgb(236, 205, 194);
+    border-radius: 3px;
+}
+.typing-text p span.active {
+    color: #fd791b;    
+}
+.typing-text p span.active::before {
+    content: "";
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    height:4px;
+    width: 100%;
+    background: #752375;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink
+{
+    50%{
+        opacity: 30;
+    }
+}
+
 .content-box .content {
     display: flex;
     margin-top: 17px;
