@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@1000&family=Zen+Kaku+Gothic+Antique&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #8f5127;
+}
+
+.wrapper {
+    width: 770px;
+    background: #fcf1d3;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.wrapper .content-box {
+    padding: 15px 20px 0;
+
+}
+
+.content-box .typing-text {
+    max-height: 255px;
+    overflow-y: auto;
+}
+
+.typing-text::-webkit-scrollbar {
+    width: 0;
+}
+
+.typing-text {
+    font-size: 21px;
+    text-align: justify;
+}
+
+.content-box .content {
+    display: flex;
+    margin-top: 17px;
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.content .result-detail {
+    display: flex;
+    width: calc(100% - 140px);
+    justify-content: space-between;
+}
+
+.result-detail li {
+    display: flex;
+    list-style: none;
+
+}
+
+.result-detail li p {
+
+    font-size: 19px;
+
+}
+
+.result-detail li span {
+    display: block;
+    list-style: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
