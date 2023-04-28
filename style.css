@@ -15,14 +15,14 @@ body {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    color: #ffffff;   
-    background: rgb(0, 0, 0);
+    color: #fcf7ec;   
+    background: #0e0e0e;
     cursor: url('images/whiterabbitcursor.gif'),auto;
 }
 
 .wrapper {
     width: 1000px;
-    background: #777777;
+    background: #1a1a1a;
     padding: 20px;
     border-radius: 20px;
 }
@@ -40,7 +40,6 @@ body {
 
 .content-box .typing-text {
     display: flex;
-    border-right: 1px solid #ccc;
     max-height: 255px;
     padding-right:10px;
     overflow-y: auto;
@@ -63,7 +62,7 @@ body {
     border-radius: 3px;
 }
 .typing-text p span.active {
-    color: #cacaca;   
+    color: #b6b6b6;   
     position: relative; 
 }
 .typing-text p span.active::before{
@@ -73,7 +72,7 @@ body {
     bottom: 0;
     height:2px;
     width: 100%;
-    background: #000000;
+    background: #a02828;
     animation: blink 4s ease-in-out infinite;
 }
 
@@ -141,5 +140,5 @@ body {
 
 .content button:hover {
     cursor: pointer;
-    background:#966748;
+    background:#383838;
 }
