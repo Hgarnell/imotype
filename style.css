@@ -13,6 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
     color: #ffffff;   
     background: rgb(0, 0, 0);
@@ -20,7 +21,7 @@ body {
 }
 
 .wrapper {
-    width: 770px;
+    width: 1000px;
     background: #777777;
     padding: 20px;
     border-radius: 20px;
@@ -33,11 +34,15 @@ body {
 }
 .wrapper .content-box {
     padding: 15px 20px 0;
+    display: flex;
 
 }
 
 .content-box .typing-text {
+    display: flex;
+    border-right: 1px solid #ccc;
     max-height: 255px;
+    padding-right:10px;
     overflow-y: auto;
 }
 
@@ -81,16 +86,15 @@ body {
 
 .content-box .content {
     display: flex;
+    flex-direction: column;
+    align-content: center;
     margin-top: 17px;
-    border-top: 1px solid #ccc;
-    padding: 12px 0;
-    justify-content: space-between;
+    margin-left: 10px;
+    min-width:250px;
     align-items: center;
 }
 
 .content .result-detail {
-    display: flex;
-    width: calc(100% - 140px);
     justify-content: space-between;
 }
 
@@ -99,12 +103,10 @@ body {
     display: flex;
     list-style: none;
     align-items: center;
+    left:-10px;
+    position: relative;
 }
-.result-detail li:not(:first-child)
-{
-    padding-left: 22px;
-    border-left: 1px solid #ccc;
-}
+
 .result-detail li p {
     font-size: 19px;
 }

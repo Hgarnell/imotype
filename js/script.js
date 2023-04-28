@@ -5,6 +5,8 @@ wpmTag = document.querySelector(".WPM span");
 cpmTag = document.querySelector(".CPM span");
 resetBtn = document.querySelector("button");
 timeTag = document.querySelector(".time span b");
+spotifyTag = document.querySelector(".spotify-play span");
+warningMessage = document.getElementById("caps-lock-warning");
 
 let timer,
   maxTime = 60,
@@ -16,6 +18,7 @@ function randomParagraph() {
   //select a random number thats always less than the length of the paragraph array
   let randIndex = Math.floor(Math.random() * paragraphs.length);
   typingText.innerHTML = "";
+  spotifyTag.innerHTML = spotify[randIndex];
 
   //selecting a random pragraph and then splitting each individual character
   //add each character into a span tag, which should then be inside a p tag
@@ -74,9 +77,20 @@ function initTyping() {
       .split(" ").length;
 
     let wpm = Math.round(numCompleteWords / (elapsedSeconds / 60));
-
     // set wpm to 0 if the wpm is less than 0, null or infinity
     wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
+
+    //check if caps is on
+    inpField.addEventListener("keyup", function (event) {
+      const capsLockOn = event.getModifierState("CapsLock");
+
+      if (capsLockOn) {
+        warningMessage.style.display = "block";
+      } else {
+        warningMessage.style.display = "none";
+      }
+    });
+
     //update text in result detail parameters
     mistakeTag.innerText = mistakes;
     cpmTag.innerText = charIndex - mistakes;
@@ -107,6 +121,7 @@ function resetGame() {
   cpmTag.innerText = 0;
   wpmTag.innerText = 0;
 }
+
 randomParagraph();
 
 inpField.addEventListener("input", initTyping);
